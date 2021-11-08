@@ -1,8 +1,21 @@
+import { ThemeProvider } from 'styled-components';
+import Header from './components/Header';
+import GlobalStyles from './components/styles/Global';
+
+const theme = {
+	colors: {
+		body: '#fff',
+	},
+};
+
 function App() {
 	return (
-		<div>
-			<h1>Hello</h1>
-		</div>
+		<ThemeProvider theme={theme}>
+			<>
+				<GlobalStyles />
+				<Header />
+			</>
+		</ThemeProvider>
 	);
 }
 
